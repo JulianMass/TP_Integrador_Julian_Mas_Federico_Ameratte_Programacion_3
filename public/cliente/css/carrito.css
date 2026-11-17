@@ -1,0 +1,283 @@
+/* Contenedor principal del carrito */
+.carrito {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Productos agregados */
+#contenedorCarrito {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    min-height: 150px;
+}
+
+/* Tarjeta de cada producto del carrito */
+.item-carrito {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #dce3eb;
+}
+
+.item-carrito:last-child {
+    border-bottom: none;
+}
+
+.item-carrito img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.info-producto {
+    flex: 1;
+}
+
+.info-producto h3 {
+    color: #142d4e;
+    margin-bottom: 8px;
+}
+
+.info-producto p {
+    margin-bottom: 6px;
+}
+
+/* Controles de cantidad */
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cantidad button {
+    background-color: #e1eaf4;
+    color: #142d4e;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cantidad button:hover {
+    background-color: #c5d8ec;
+}
+
+/* Botón para eliminar */
+.btn-eliminar {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 13px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #962d22;
+}
+
+/* Resumen de compra */
+.resumen {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.resumen h2 {
+    color: #142d4e;
+    margin-bottom: 20px;
+}
+
+.resumen p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#totalCarrito {
+    color: #1769aa;
+}
+
+/* Botones del resumen */
+.resumen button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnConfirmarCompra {
+    background-color: #1769aa;
+    color: white;
+}
+
+#btnConfirmarCompra:hover {
+    background-color: #105184;
+}
+
+#btnSeguirComprando {
+    background-color: #e1eaf4;
+    color: #142d4e;
+}
+
+#btnSeguirComprando:hover {
+    background-color: #c5d8ec;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 750px) {
+    .carrito {
+        grid-template-columns: 1fr;
+    }
+
+    .item-carrito {
+        flex-wrap: wrap;
+    }
+
+    .item-carrito img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .resumen {
+        width: 100%;
+    }
+}
+
+/* Ventana de confirmación */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenido de la ventana */
+.modal-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido h2 {
+    color: #142d4e;
+    margin-bottom: 15px;
+}
+
+.modal-contenido p {
+    margin-bottom: 25px;
+}
+
+/* Botones del modal */
+.modal-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-botones button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnAceptarCompra {
+    background-color: #1769aa;
+    color: white;
+}
+
+#btnAceptarCompra:hover {
+    background-color: #105184;
+}
+
+#btnCancelarCompra {
+    background-color: #e1eaf4;
+    color: #142d4e;
+}
+
+#btnCancelarCompra:hover {
+    background-color: #c5d8ec;
+}
+
+/* Logo de TechPoint */
+.logo img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 700px) {
+    .logo img {
+        width: 220px;
+        margin: 0 auto;
+    }
+}
+
+/* Adaptación del carrito al tema oscuro */
+body.tema-oscuro #contenedorCarrito,
+body.tema-oscuro .resumen,
+body.tema-oscuro .modal-contenido {
+    background-color: #1b2a41;
+    color: #ffffff;
+}
+
+body.tema-oscuro .info-producto h3,
+body.tema-oscuro .resumen h2,
+body.tema-oscuro .modal-contenido h2 {
+    color: #66c2ff;
+}
+
+body.tema-oscuro .item-carrito {
+    border-bottom-color: #40536e;
+}
+
+body.tema-oscuro .cantidad button,
+body.tema-oscuro #btnSeguirComprando,
+body.tema-oscuro #btnCancelarCompra {
+    background-color: #40536e;
+    color: #ffffff;
+}
+
+body.tema-oscuro .cantidad button:hover,
+body.tema-oscuro #btnSeguirComprando:hover,
+body.tema-oscuro #btnCancelarCompra:hover {
+    background-color: #526b8c;
+}
+
+body.tema-oscuro #totalCarrito {
+    color: #66c2ff;
+}
+
+/* Botón deshabilitado cuando el carrito está vacío */
+#btnConfirmarCompra:disabled {
+    background-color: #aab4c0;
+    cursor: not-allowed;
+    opacity: 0.8;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPoint | Gestión de productos</title>
+
+    <link rel="icon" type="image/png" href="/cliente/img/favicon.png">
+    <link rel="stylesheet" href="/admin/css/productos.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="marca">
+            <img src="/cliente/img/logo.png" alt="Logo de TechPoint" class="logo">
+
+            <p class="integrantes">
+                Integrantes: Julián Mas y Federico Ameratte
+            </p>
+        </div>
+
+        <nav>
+            <a href="/admin/dashboard.html" class="btn-tema">Panel principal</a>
+
+            <span id="nombreAdministrador"></span>
+
+            <button id="btnTema" class="btn-tema" type="button">
+                🌙 Tema oscuro
+            </button>
+
+            <button id="btnCerrarSesion" type="button">
+                Cerrar sesión
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="encabezado">
+            <div>
+                <h1>Gestión de productos</h1>
+                <p>Administrá los productos de tu tienda.</p>
+            </div>
+
+            <button id="btnNuevoProducto" type="button">
+                + Agregar producto
+            </button>
+        </section>
+
+        <!-- Formulario para agregar y editar productos -->
+        <section id="formularioProducto" class="formulario-producto oculto">
+
+            <h2 id="tituloFormulario">Agregar producto</h2>
+
+            <form id="formProducto">
+
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" required></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" min="0.01" step="0.01" required>
+                </div>
+
+                <div class="campo">
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock" min="0" step="1" required>
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="perifericos">Periféricos</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="imagen">Imagen del producto:</label>
+                    <input type="file" id="imagen" accept="image/jpeg,image/png,image/webp">
+                    <small>Formatos permitidos: JPG, PNG y WEBP. Máximo 5 MB.</small>
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" id="btnGuardarProducto">
+                        Guardar producto
+                    </button>
+
+                    <button type="button" id="btnCancelarFormulario">
+                        Cancelar
+                    </button>
+                </div>
+
+                <p id="mensajeFormulario"></p>
+
+            </form>
+
+        </section>
+
+        <section class="filtros">
+
+            <div class="filtro">
+                <label for="filtroCategoria">Categoría:</label>
+
+                <select id="filtroCategoria">
+                    <option value="todos">Todas las categorías</option>
+                    <option value="perifericos">Periféricos</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+            </div>
+
+            <div class="filtro">
+                <label for="filtroEstado">Estado:</label>
+
+                <select id="filtroEstado">
+                    <option value="activos">Productos activos</option>
+                    <option value="inactivos">Productos dados de baja</option>
+                    <option value="todos">Todos los productos</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section class="productos">
+
+            <h2>Periféricos</h2>
+            <div id="contenedorPerifericos" class="contenedor-productos"></div>
+
+            <h2>Accesorios</h2>
+            <div id="contenedorAccesorios" class="contenedor-productos"></div>
+
+            <p id="mensaje" class="mensaje"></p>
+
+        </section>
+
+    </main>
+
+    <script src="/cliente/js/tema.js"></script>
+    <script src="/admin/js/dashboard.js"></script>
+    <script src="/admin/js/productos.js"></script>
+
+</body>
+</html>

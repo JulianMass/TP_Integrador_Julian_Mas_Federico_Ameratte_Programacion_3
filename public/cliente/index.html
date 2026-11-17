@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPoint | Bienvenido</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="marca">
+            <img src="img/logo.png" alt="Logo de TechPoint" class="logo">
+
+            <p class="integrantes"> 
+                Integrantes: Julián Mas y Federico Ameratte 
+            </p>
+        </div>
+
+        <nav>
+            <a href="/admin/login.html" class="btn-tema"> 
+                Administración 
+            </a>
+
+            <button id="btnTema" class="btn-tema" type="button">
+                🌙 Tema oscuro
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2> ¡Bienvenido a TechPoint! </h2>
+
+            <p>
+                Descubrí nuestros productos y encontrá
+                lo que necesitás para tu tecnología.
+            </p>
+
+            <form id="formBienvenida">
+                <label for="nombreCliente">
+                    Ingresá tu nombre para comenzar:
+                </label>
+
+                <input
+                    type="text"
+                    id="nombreCliente"
+                    placeholder="Tu nombre"
+                    required
+                >
+
+                <button type="submit">
+                    Comenzar
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/tema.js"></script>
+    <script src="js/cliente.js"></script>
+
+</body>
+</html>

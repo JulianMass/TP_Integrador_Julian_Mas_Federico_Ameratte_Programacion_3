@@ -1,0 +1,329 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+}
+
+/* Encabezado */
+header {
+    background-color: #142d4e;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Logo de TechPoint */
+.logo img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+}
+
+.integrantes {
+    font-size: 13px;
+    color: #cbd8e8;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #66c2ff;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Bienvenida */
+.bienvenida {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bienvenida h2 {
+    color: #142d4e;
+    margin-bottom: 10px;
+}
+
+/* Catálogo */
+.catalogo {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.catalogo h2 {
+    color: #142d4e;
+    margin-bottom: 20px;
+}
+
+/* Botones de categorías */
+.categorias {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.btn-categoria {
+    background-color: #e1eaf4;
+    color: #142d4e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-categoria:hover,
+.btn-categoria.activo {
+    background-color: #1769aa;
+    color: white;
+}
+
+/* Contenedor de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    min-height: 150px;
+}
+
+/* Tarjetas de productos: se utilizarán al cargar los datos */
+.producto {
+    border: 1px solid #dce3eb;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+}
+
+.producto img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.producto h3 {
+    color: #142d4e;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    margin-bottom: 8px;
+}
+
+.producto .precio {
+    font-size: 19px;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+.producto button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.producto button:hover {
+    background-color: #105184;
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.paginacion button {
+    background-color: #142d4e;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background-color: #1769aa;
+}
+
+.paginacion button:disabled {
+    background-color: #aab4c0;
+    cursor: not-allowed;
+}
+
+/* Pie de página */
+footer {
+    background-color: #142d4e;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .paginacion {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .catalogo,
+    .bienvenida {
+        padding: 18px;
+    }
+
+    .logo img {
+        width: 220px;
+        margin: 0 auto;
+    }
+}
+
+/* TEMA CLARO Y TEMA OSCURO */
+
+/* Tema claro */
+body.tema-claro {
+    background-color: #f2f5f9;
+    color: #222;
+}
+
+/* Tema oscuro */
+body.tema-oscuro {
+    background-color: #101827;
+    color: #ffffff;
+}
+
+/* Tarjetas y contenedores */
+body.tema-oscuro .bienvenida,
+body.tema-oscuro .catalogo,
+body.tema-oscuro .producto,
+body.tema-oscuro #contenedorCarrito,
+body.tema-oscuro .resumen,
+body.tema-oscuro .ticket,
+body.tema-oscuro .modal-contenido {
+    background-color: #1b2a41;
+    color: #ffffff;
+}
+
+/* Títulos */
+body.tema-oscuro .bienvenida h2,
+body.tema-oscuro .catalogo h2,
+body.tema-oscuro .producto h3,
+body.tema-oscuro .info-producto h3,
+body.tema-oscuro .resumen h2,
+body.tema-oscuro .modal-contenido h2,
+body.tema-oscuro .detalle-ticket h3,
+body.tema-oscuro .total-ticket h3 {
+    color: #66c2ff;
+}
+
+/* Textos secundarios */
+body.tema-oscuro .bienvenida p,
+body.tema-oscuro .producto p,
+body.tema-oscuro .info-producto p,
+body.tema-oscuro .resumen p,
+body.tema-oscuro .modal-contenido p,
+body.tema-oscuro .ticket p {
+    color: #cbd8e8;
+}
+
+/* Bordes */
+body.tema-oscuro .producto,
+body.tema-oscuro .item-carrito,
+body.tema-oscuro .producto-ticket {
+    border-color: #40536e;
+}
+
+/* Controles del carrito y botones secundarios */
+body.tema-oscuro .cantidad button,
+body.tema-oscuro #btnSeguirComprando,
+body.tema-oscuro #btnCancelarCompra,
+body.tema-oscuro #btnSalir {
+    background-color: #40536e;
+    color: #ffffff;
+}
+
+/* Efecto al pasar el mouse */
+body.tema-oscuro .cantidad button:hover,
+body.tema-oscuro #btnSeguirComprando:hover,
+body.tema-oscuro #btnCancelarCompra:hover,
+body.tema-oscuro #btnSalir:hover {
+    background-color: #526b8b;
+}
+
+/* Botón para cambiar el tema */
+.btn-tema {
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-tema:hover {
+    background-color: #105184;
+}
+
+/* Botón deshabilitado cuando no hay stock */
+.producto button:disabled {
+    background-color: #aab4c0;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+body.tema-oscuro .producto button:disabled {
+    background-color: #526176;
+    color: #cbd8e8;
+}

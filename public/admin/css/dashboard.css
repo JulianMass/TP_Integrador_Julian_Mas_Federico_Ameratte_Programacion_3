@@ -1,0 +1,226 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #172337;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: #172337;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #1687ff;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+}
+
+.integrantes {
+    font-size: 13px;
+    color: #cbd8e8;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#nombreAdministrador {
+    color: white;
+    font-weight: bold;
+}
+
+/* Botones */
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-tema {
+    background-color: #34445c;
+    color: white;
+}
+
+.btn-tema:hover {
+    background-color: #465a76;
+}
+
+#btnCerrarSesion {
+    background-color: #dc3545;
+    color: white;
+}
+
+#btnCerrarSesion:hover {
+    background-color: #bd2130;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+.bienvenida {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bienvenida h1 {
+    margin-bottom: 15px;
+    color: #172337;
+}
+
+.bienvenida p {
+    margin-top: 8px;
+    color: #596579;
+}
+
+/* Sección de opciones */
+.contenido {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contenido h2 {
+    margin-bottom: 12px;
+}
+
+.contenido > p {
+    color: #596579;
+    margin-bottom: 25px;
+}
+
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.opcion {
+    background-color: #edf5ff;
+    border: 1px solid #d3e5fa;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.opcion h3 {
+    color: #1267b1;
+    margin-bottom: 12px;
+}
+
+.opcion p {
+    color: #596579;
+    line-height: 1.5;
+}
+
+/* Tema oscuro */
+body.tema-oscuro {
+    background-color: #101a29;
+    color: #e8eef7;
+}
+
+.tema-oscuro .bienvenida,
+.tema-oscuro .contenido {
+    background-color: #1c2a3d;
+    color: #e8eef7;
+}
+
+.tema-oscuro .bienvenida h1,
+.tema-oscuro .contenido h2 {
+    color: #e8eef7;
+}
+
+.tema-oscuro .bienvenida p,
+.tema-oscuro .contenido > p,
+.tema-oscuro .opcion p {
+    color: #bdc9d9;
+}
+
+.tema-oscuro .opcion {
+    background-color: #263951;
+    border-color: #3b526e;
+}
+
+.tema-oscuro .opcion h3 {
+    color: #69b4ff;
+}
+
+/* Diseño adaptable */
+@media (max-width: 700px) {
+    header {
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .marca {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .bienvenida,
+    .contenido {
+        padding: 22px;
+    }
+}
+
+.btn-productos {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: #1687ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-productos:hover {
+    background-color: #086acb;
+}

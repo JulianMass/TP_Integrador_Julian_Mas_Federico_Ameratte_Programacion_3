@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPoint | Panel de administración</title>
+
+    <link rel="icon" type="image/png" href="/cliente/img/favicon.png">
+    <link rel="stylesheet" href="/admin/css/dashboard.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="marca">
+            <img src="/cliente/img/logo.png" alt="Logo de TechPoint" class="logo">
+
+            <p class="integrantes">
+                Integrantes: Julián Mas y Federico Ameratte
+            </p>
+        </div>
+
+        <nav>
+            <span id="nombreAdministrador"></span>
+            <button id="btnTema" class="btn-tema" type="button">
+                🌙 Tema oscuro
+            </button>
+            <button id="btnCerrarSesion" type="button">
+                Cerrar sesión
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bienvenida">
+            <h1>Panel de administración</h1>
+            <p>Bienvenido a TechPoint.</p>
+            <p>Desde aquí podrás administrar los productos de la tienda.</p>
+        </section>
+
+        <section class="contenido">
+            <h2>Gestión de productos</h2>
+            <p>Seleccioná una opción para comenzar.</p>
+
+            <div class="opciones">
+                <div class="opcion">
+                    <h3>Productos</h3>
+
+                    <p>Consultar y administrar los productos de TechPoint.</p>
+
+                    <a href="/admin/productos.html" class="btn-productos">
+                        Administrar productos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/cliente/js/tema.js"></script>
+    <script src="/admin/js/dashboard.js"></script>
+
+</body>
+</html>

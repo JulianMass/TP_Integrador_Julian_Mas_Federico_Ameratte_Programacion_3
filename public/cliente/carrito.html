@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TechPoint | Mi carrito </title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de TechPoint">
+        </div>
+
+        <p class="integrantes">
+            Integrantes: Julián Mas y Federico Ameratte
+        </p>
+
+        <nav>
+            <a href="catalogo.html">Productos</a>
+            <a href="carrito.html">Mi carrito</a>
+            <a href="/admin/login.html">Administración</a>
+
+            <button id="btnTema" class="btn-tema" type="button">
+                🌙 Tema oscuro
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="bienvenida">
+            <h2> Mi carrito </h2>
+            <p> Revisá los productos que elegiste antes de confirmar tu compra. </p>
+        </section>
+
+        <section class="carrito">
+
+            <div id="contenedorCarrito">
+                <p> Cargando carrito... </p>
+            </div>
+
+            <div class="resumen">
+                <h2> Resumen de compra </h2>
+
+                <p>
+                    Total:
+                    <span id="totalCarrito">$0</span>
+                </p>
+
+                <button id="btnConfirmarCompra">
+                    Confirmar compra
+                </button>
+
+                <button id="btnSeguirComprando">
+                    Seguir comprando
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Ventana de confirmación de compra -->
+        <div id="modalConfirmacion" class="modal">
+            <div class="modal-contenido">
+                <h2>Confirmar compra</h2>
+
+                <p>¿Estás seguro de que querés confirmar tu compra?</p>
+
+                <div class="modal-botones">
+                    <button id="btnAceptarCompra">
+                        Sí, confirmar
+                    </button>
+
+                    <button id="btnCancelarCompra">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p> TechPoint - Tecnología y accesorios </p>
+    </footer>
+
+    <script src="js/tema.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

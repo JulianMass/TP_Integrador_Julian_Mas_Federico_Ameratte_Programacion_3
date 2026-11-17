@@ -1,0 +1,184 @@
+/* Contenedor principal del ticket */
+.ticket {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Encabezado del ticket */
+.ticket-encabezado {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #dce3eb;
+}
+
+.ticket-encabezado h2 {
+    color: #1769aa;
+    margin-bottom: 12px;
+}
+
+.ticket-encabezado p {
+    margin-bottom: 6px;
+}
+
+/* Datos del cliente */
+.datos-cliente {
+    padding: 20px 0;
+    border-bottom: 1px solid #dce3eb;
+}
+
+.datos-cliente p {
+    margin-bottom: 10px;
+}
+
+/* Detalle de productos */
+.detalle-ticket {
+    padding: 25px 0;
+}
+
+.detalle-ticket h3 {
+    color: #142d4e;
+    margin-bottom: 20px;
+}
+
+/* Cada producto del ticket */
+.producto-ticket {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5eaf0;
+}
+
+.producto-ticket p {
+    margin-bottom: 5px;
+}
+
+/* Total */
+.total-ticket {
+    text-align: right;
+    padding: 20px 0;
+    border-top: 2px solid #dce3eb;
+}
+
+.total-ticket h3 {
+    color: #142d4e;
+    font-size: 24px;
+}
+
+#totalTicket {
+    color: #1769aa;
+}
+
+/* Botones */
+.acciones-ticket {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.acciones-ticket button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnDescargarPDF {
+    background-color: #1769aa;
+    color: white;
+}
+
+#btnDescargarPDF:hover {
+    background-color: #105184;
+}
+
+#btnSalir {
+    background-color: #e1eaf4;
+    color: #142d4e;
+}
+
+#btnSalir:hover {
+    background-color: #c5d8ec;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .ticket {
+        padding: 20px;
+    }
+
+    .producto-ticket {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .total-ticket h3 {
+        font-size: 20px;
+    }
+
+    .acciones-ticket {
+        flex-direction: column;
+    }
+
+    .acciones-ticket button {
+        width: 100%;
+    }
+}
+
+/* Logo de TechPoint */
+.logo img {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 700px) {
+    .logo img {
+        width: 220px;
+        margin: 0 auto;
+    }
+}
+
+/* Adaptación del ticket al tema oscuro */
+body.tema-oscuro .ticket {
+    background-color: #1b2a41;
+    color: #ffffff;
+}
+
+body.tema-oscuro .ticket-encabezado h2 {
+    color: #66c2ff;
+}
+
+body.tema-oscuro .detalle-ticket h3,
+body.tema-oscuro .total-ticket h3 {
+    color: #ffffff;
+}
+
+body.tema-oscuro .ticket-encabezado,
+body.tema-oscuro .datos-cliente,
+body.tema-oscuro .producto-ticket,
+body.tema-oscuro .total-ticket {
+    border-color: #40536e;
+}
+
+body.tema-oscuro #totalTicket {
+    color: #66c2ff;
+}
+
+body.tema-oscuro #btnSalir {
+    background-color: #40536e;
+    color: #ffffff;
+}
+
+body.tema-oscuro #btnSalir:hover {
+    background-color: #526b8c;
+}
